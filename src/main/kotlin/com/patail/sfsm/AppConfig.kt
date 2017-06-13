@@ -1,5 +1,6 @@
 package com.patail.sfsm
 
+import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.context.ApplicationContext
 import org.springframework.context.annotation.Configuration
 import org.springframework.statemachine.config.EnableStateMachine
@@ -14,6 +15,7 @@ import java.util.*
  */
 @Configuration
 @EnableStateMachine
+@SpringBootApplication
 class AppConfig(val ctx: ApplicationContext) : EnumStateMachineConfigurerAdapter<States, Events>() {
 
     override fun configure(states: StateMachineStateConfigurer<States, Events>) {
